@@ -29,6 +29,8 @@
         private void InitializeComponent()
         {
             groupBox1 = new GroupBox();
+            btnXuat = new Button();
+            btnNhap = new Button();
             btnThoat = new Button();
             btnHuyBo = new Button();
             btnXoa = new Button();
@@ -41,8 +43,7 @@
             dgvLoaiSanPham = new DataGridView();
             ID = new DataGridViewTextBoxColumn();
             TenLoai = new DataGridViewTextBoxColumn();
-            btnNhap = new Button();
-            btnXuat = new Button();
+            helpProvider1 = new HelpProvider();
             groupBox1.SuspendLayout();
             groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)dgvLoaiSanPham).BeginInit();
@@ -66,6 +67,28 @@
             groupBox1.TabIndex = 0;
             groupBox1.TabStop = false;
             groupBox1.Text = "Thông tin loại sản phầm";
+            // 
+            // btnXuat
+            // 
+            btnXuat.Font = new Font("Segoe UI", 10.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            btnXuat.Location = new Point(954, 73);
+            btnXuat.Name = "btnXuat";
+            btnXuat.Size = new Size(94, 29);
+            btnXuat.TabIndex = 4;
+            btnXuat.Text = "Xuất";
+            btnXuat.UseVisualStyleBackColor = true;
+            btnXuat.Click += btnXuat_Click;
+            // 
+            // btnNhap
+            // 
+            btnNhap.Font = new Font("Segoe UI", 10.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            btnNhap.Location = new Point(839, 74);
+            btnNhap.Name = "btnNhap";
+            btnNhap.Size = new Size(94, 29);
+            btnNhap.TabIndex = 4;
+            btnNhap.Text = "Nhập";
+            btnNhap.UseVisualStyleBackColor = true;
+            btnNhap.Click += btnNhap_Click;
             // 
             // btnThoat
             // 
@@ -136,8 +159,10 @@
             // 
             // txtTenLoai
             // 
+            helpProvider1.SetHelpString(txtTenLoai, "VD: Iphone 15 promax");
             txtTenLoai.Location = new Point(173, 30);
             txtTenLoai.Name = "txtTenLoai";
+            helpProvider1.SetShowHelp(txtTenLoai, true);
             txtTenLoai.Size = new Size(1006, 27);
             txtTenLoai.TabIndex = 1;
             // 
@@ -193,28 +218,6 @@
             TenLoai.Name = "TenLoai";
             TenLoai.ReadOnly = true;
             // 
-            // btnNhap
-            // 
-            btnNhap.Font = new Font("Segoe UI", 10.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            btnNhap.Location = new Point(839, 74);
-            btnNhap.Name = "btnNhap";
-            btnNhap.Size = new Size(94, 29);
-            btnNhap.TabIndex = 4;
-            btnNhap.Text = "Nhập";
-            btnNhap.UseVisualStyleBackColor = true;
-            btnNhap.Click += btnNhap_Click;
-            // 
-            // btnXuat
-            // 
-            btnXuat.Font = new Font("Segoe UI", 10.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            btnXuat.Location = new Point(954, 73);
-            btnXuat.Name = "btnXuat";
-            btnXuat.Size = new Size(94, 29);
-            btnXuat.TabIndex = 4;
-            btnXuat.Text = "Xuất";
-            btnXuat.UseVisualStyleBackColor = true;
-            btnXuat.Click += btnXuat_Click;
-            // 
             // FrmLoaiSanPham
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
@@ -249,5 +252,6 @@
         private DataGridViewTextBoxColumn TenLoai;
         private Button btnXuat;
         private Button btnNhap;
+        private HelpProvider helpProvider1;
     }
 }

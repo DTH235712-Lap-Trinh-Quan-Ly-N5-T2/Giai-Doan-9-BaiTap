@@ -50,6 +50,7 @@
             HoVaTen = new DataGridViewTextBoxColumn();
             DiaChi = new DataGridViewTextBoxColumn();
             DienThoai = new DataGridViewTextBoxColumn();
+            helpProvider1 = new HelpProvider();
             groupBox1.SuspendLayout();
             groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)dgvKhachHang).BeginInit();
@@ -197,8 +198,10 @@
             // 
             // txtDienThoai
             // 
+            helpProvider1.SetHelpString(txtDienThoai, "Phải nhập số");
             txtDienThoai.Location = new Point(507, 37);
             txtDienThoai.Name = "txtDienThoai";
+            helpProvider1.SetShowHelp(txtDienThoai, true);
             txtDienThoai.Size = new Size(245, 27);
             txtDienThoai.TabIndex = 3;
             // 
@@ -327,5 +330,6 @@
         private DataGridViewTextBoxColumn HoVaTen;
         private DataGridViewTextBoxColumn DiaChi;
         private DataGridViewTextBoxColumn DienThoai;
+        private HelpProvider helpProvider1;
     }
 }

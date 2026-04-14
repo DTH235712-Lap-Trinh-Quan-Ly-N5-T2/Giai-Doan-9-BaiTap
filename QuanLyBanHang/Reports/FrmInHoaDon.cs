@@ -81,7 +81,7 @@ namespace QuanLyBanHang.Reports
                     IList<ReportParameter> param = new List<ReportParameter>
                     {
                         new ReportParameter("NgayLap", string.Format("Ngày {0} Tháng {1} Năm {2}", hoaDon.NgayLap.Day, hoaDon.NgayLap.Month, hoaDon.NgayLap.Year)),
-                        new ReportParameter("NguoiBan_Ten", "CỬA HÀNG THIẾT BỊ IT VÕ VĂN TỶ"),
+                        new ReportParameter("NguoiBan_Ten", "CỬA HÀNG THIẾT BỊ IT TRẦN TRÍ NHÂN"),
                         new ReportParameter("NguoiBan_DiaChi", "Đại học An Giang, TP. Long Xuyên"),
                         new ReportParameter("NguoiBan_MaSoThue", "123456789"),
                         new ReportParameter("NguoiMua_Ten", tenKhachHang),

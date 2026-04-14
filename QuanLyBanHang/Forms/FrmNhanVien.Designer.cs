@@ -59,6 +59,7 @@
             btnLuu = new Button();
             btnThem = new Button();
             cboQuyenHan = new ComboBox();
+            helpProvider1 = new HelpProvider();
             ((System.ComponentModel.ISupportInitialize)dgvNhanVien).BeginInit();
             groupBox2.SuspendLayout();
             groupBox1.SuspendLayout();
@@ -424,5 +425,6 @@
         private Button btnSua;
         private Button btnLuu;
         private Button btnThem;
+        private HelpProvider helpProvider1;
     }
 }
